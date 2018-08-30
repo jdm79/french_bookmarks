@@ -12,6 +12,14 @@ class BookmarkManager < Sinatra::Base
     erb :bookmarks
   end
 
+  get '/add_bookmark' do
+    erb :add_bookmark
+  end
+
+  post '/add_bookmark' do
+    redirect '/bookmarks'
+  end
+
   # start the server if ruby file executed directly
   run! if app_file == $0
 end

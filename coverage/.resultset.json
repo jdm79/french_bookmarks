@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/mathou/Projects/bookmark_manager/spec/bookmarks_spec.rb": [
+      "/Users/jamesdanielmalvern/Makers/week-challenges/week4/french_bookmark_manager/spec/bookmarks_spec.rb": [
         1,
         null,
         1,
@@ -21,7 +21,7 @@
         null,
         null
       ],
-      "/Users/mathou/Projects/bookmark_manager/spec/features/features_bookmarks_spec.rb": [
+      "/Users/jamesdanielmalvern/Makers/week-challenges/week4/french_bookmark_manager/spec/features/features_bookmarks_spec.rb": [
         1,
         null,
         1,
@@ -39,11 +39,19 @@
         1,
         1,
         1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
         null,
         null,
         null
       ]
     },
-    "timestamp": 1535635550
+    "timestamp": 1535637941
   }
 }

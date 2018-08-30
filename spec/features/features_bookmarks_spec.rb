@@ -17,4 +17,12 @@ feature 'Bookmarks features' do
     expect(page).to have_content('http://www.google.com')
   end
 
+  scenario 'a user can bookmark a page' do
+    visit('/add_bookmark')
+    fill_in :url, with: "www.franceinter.fr"
+    click_button 'Submit'
+    expect(page).to have_content("www.franceinter.fr")
+  end
+
+
 end
