@@ -9,21 +9,19 @@
         1,
         1,
         null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
         null,
         null,
         null
       ],
-      "/Users/mathou/Projects/bookmark_manager/lib/bookmarks.rb": [
-        1,
-        null,
-        1,
-        2,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/mathou/Projects/bookmark_manager/spec/features/bookmarks_spec.rb": [
+      "/Users/mathou/Projects/bookmark_manager/spec/features/features_bookmarks_spec.rb": [
         1,
         null,
         1,
@@ -32,6 +30,11 @@
         null,
         null,
         1,
+        1,
+        1,
+        1,
+        1,
+        null,
         1,
         1,
         1,
@@ -41,6 +44,6 @@
         null
       ]
     },
-    "timestamp": 1535469487
+    "timestamp": 1535635550
   }
 }
