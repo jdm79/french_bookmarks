@@ -1,7 +1,14 @@
 <%= flash[:notice] %>
 <a href="/add_bookmark">Add a Bookmark</a>
+
 <ul>
   <% @bookmarks.each do | bookmark | %>
-    <a href="https://www.google.com"><li> <%= bookmark %></li></a>
+    <li>
+      <a href="<%= bookmark.url %>">
+        <%= bookmark.title %>
+      </a>
+    </li>
   <% end %>
 </ul>
+
+

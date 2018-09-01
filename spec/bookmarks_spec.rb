@@ -19,16 +19,18 @@ describe Bookmarks do
 
   describe '.add' do
     it 'adds a new bookmark' do
-      Bookmarks.add(url: 'http://twitter.com')
-      Bookmarks.add(title: 'twitter')
 
-      expect(Bookmarks.all).to include 'http://twitter.com'
-      expect(Bookmarks.all).to include 'twitter'
+      bookmark = Bookmarks.add(url: 'http://www.testbookmark.com', title: 'Test Bookmark')
+
+      bookmark = Bookmarks.all.first
+
+      expect(bookmark).to eq 'http://www.testbookmark.com'
 
     end
 
     it 'does not create a new bookmark if the URL is not valid' do
       Bookmarks.add(url: 'not a real bookmark', title: 'not real')
+
       expect(Bookmarks.all).not_to include 'not a real bookmark'
     end
   end
