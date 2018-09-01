@@ -19,9 +19,13 @@ feature 'Bookmarks features' do
 
   scenario 'a user can bookmark a page' do
     visit('/add_bookmark')
+    fill_in('title', with: 'france inter')
     fill_in('url', with: 'http://www.franceinter.fr')
+
     click_button 'Submit'
     expect(page).to have_content('http://www.franceinter.fr')
+    expect(page).to have_content('france inter')
+
   end
 
   scenario 'a user cannot bookmark an invalid URL' do

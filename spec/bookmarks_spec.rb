@@ -6,14 +6,14 @@ describe Bookmarks do
     it '.all returns a list of bookmarks' do
       connection = PG.connect(dbname: 'bookmark_manager_test')
 
-      connection.exec("INSERT INTO bookmarks (url) VALUES('http://www.makersacademy.com');")
-      connection.exec("INSERT INTO bookmarks (url) VALUES('http://www.destroyallsoftware.com');")
-      connection.exec("INSERT INTO bookmarks (url) VALUES('http://www.google.com');")
+      connection.exec("INSERT INTO bookmarks (title, url) VALUES('makers','http://www.makersacademy.com');")
+      connection.exec("INSERT INTO bookmarks (title, url) VALUES('destroy all software','http://www.destroyallsoftware.com');")
+      connection.exec("INSERT INTO bookmarks (title, url) VALUES('google','http://www.google.com');")
 
       bookmarks = Bookmarks.all
-      expect(bookmarks).to include('http://www.makersacademy.com')
-      expect(bookmarks).to include('http://www.destroyallsoftware.com')
-      expect(bookmarks).to include('http://www.google.com')
+      expect(bookmarks).to include('makers')
+      expect(bookmarks).to include('destroy all software')
+      expect(bookmarks).to include('google')
     end
   end
 
@@ -28,7 +28,7 @@ describe Bookmarks do
     end
 
     it 'does not create a new bookmark if the URL is not valid' do
-      Bookmarks.add(url: 'not a real bookmark')
+      Bookmarks.add(url: 'not a real bookmark', title: 'not real')
       expect(Bookmarks.all).not_to include 'not a real bookmark'
     end
   end
