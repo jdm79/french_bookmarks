@@ -20,7 +20,11 @@ describe Bookmarks do
   describe '.add' do
     it 'adds a new bookmark' do
       Bookmarks.add(url: 'http://twitter.com')
+      Bookmarks.add(title: 'twitter')
+
       expect(Bookmarks.all).to include 'http://twitter.com'
+      expect(Bookmarks.all).to include 'twitter'
+
     end
 
     it 'does not create a new bookmark if the URL is not valid' do
